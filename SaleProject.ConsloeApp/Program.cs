@@ -16,4 +16,9 @@ DapperExample example=new DapperExample();
 DapperShared dapper=new DapperShared();
 //dapper.Read();
 //dapper.Edit();
-dapper.Create();
+//dapper.Create();
+
+SaleEFCoreExample saleEF=new SaleEFCoreExample();
+//saleEF.Read();
+//saleEF.Create();
+saleEF.Edit();
