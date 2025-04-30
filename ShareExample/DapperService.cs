@@ -17,7 +17,7 @@ namespace ShareExample
             _ConnectionString = connectionString;
         }
 
-        public List<T> Query<T>(string query, object param=null)
+        public List<T> Query<T>(string query, object param = null)
         {
             using IDbConnection db = new SqlConnection(_ConnectionString) ;
            var list=db.Query<T>(query, param).ToList();

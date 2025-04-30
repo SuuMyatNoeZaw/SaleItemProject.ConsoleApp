@@ -15,10 +15,10 @@ DapperExample example=new DapperExample();
 
 DapperShared dapper=new DapperShared();
 //dapper.Read();
-//dapper.Edit();
+dapper.Edit();
 //dapper.Create();
 
 SaleEFCoreExample saleEF=new SaleEFCoreExample();
 //saleEF.Read();
 //saleEF.Create();
-saleEF.Edit();
+//saleEF.Edit();

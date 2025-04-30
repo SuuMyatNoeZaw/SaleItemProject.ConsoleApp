@@ -39,7 +39,7 @@ namespace SaleProject.ConsloeApp
             Console.WriteLine("Enter Sale ID");
             int id = Int32.Parse(Console.ReadLine());
            
-                string query = $"Select * from Tbl_Sale where SaleID=@SaleId";
+                string query = "Select * from Tbl_Sale where SaleID=@SaleId AND CustomerID=2";
                 var item = service.QueryFOD<SaleModel>(query, new SaleModel()
                 {
                     SaleId = id

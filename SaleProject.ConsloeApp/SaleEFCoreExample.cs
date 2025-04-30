@@ -125,5 +125,19 @@ namespace SaleProject.ConsloeApp
             int result = db.SaveChanges();
             Console.WriteLine(result == 1 ? "Your Task is Succeed." : "Your Task is Failed.");
         }
+
+        public void Delete()
+        {
+            Console.WriteLine("Enter sale id you want to delete.");
+            int id=Int32.Parse(Console.ReadLine());
+            var item =db.Sales.AsNoTracking().FirstOrDefault( x=>x.SaleId==id);
+            if (item is null)
+            {
+                Console.WriteLine("No Data Found.");
+            }
+            db.Entry(item).State=EntityState.Deleted;
+            int result = db.SaveChanges();
+            Console.WriteLine(result == 1 ? "Your Task is Succeed." : "Your Task is Failed.");
+        }
     }
 }
